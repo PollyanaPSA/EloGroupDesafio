@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <title>Desafio elogroup</title>
+</head>
+<body>
+    <div class="form">
+        <div class="form-group offset-md-3">
+            <div class="col-sm-6">
+                <img src="images/logo.png" class="img-fluid" alt="Logo Elogroup">
+            </div>
+            <form name="formElo" id="formElo" method="POST" onsubmit="event.preventDefault(); validateForm()">
+                <div class="form-group row">
+                    <label for="inputName" class="col-sm-12 col-form-label">Nome:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputName" placeholder="Nome" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputTel" class="col-sm-12 col-form-label">Telefone:</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="inputTel" placeholder="Telefone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <legend class="col-form-label col-sm-12 pt-0">Como nos Conheceu:</legend>
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select" name="metUs" id="metUs">
+                            <option selected> </option>
+                            <option value="tv"> TV </option>
+                            <option value="internet"> Internet </option>
+                            <option value="others"> Outros </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <legend class="col-form-label col-sm-12 pt-0">Possui Rede Social:</legend>
+                    <div class="col-sm-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="socialMedia" id="radioSim" value="sim"
+                                onclick="enableSocialMedia()">
+                            <label class="form-check-label" for="radioSim">
+                                Sim
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="socialMedia" id="radioNao" value="nao"
+                                onclick="disableSocialMedia()" checked>
+                            <label class="form-check-label" for="radioNao">
+                                Não
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <legend class="col-form-label col-sm-12 pt-0">Quais:</legend>
+                    <div class="col-sm-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="checkSocialMedia" id="Facebook"
+                                disabled="true">
+                            <label class="form-check-label" for="checkFacebook">
+                                Facebook
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="checkSocialMedia" id="Linkedin"
+                                disabled="true">
+                            <label class="form-check-label" for="checkLinkedin">
+                                LinkedIn
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="checkSocialMedia" id="Instagram"
+                                disabled="true">
+                            <label class="form-check-label" for="checkInstagram">
+                                Instagram
+                            </label>
+                        </div>
+                    </div>
+                </div>
+        
+            <div class="form-group row offset-md-3">
+            <div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/validation.js"></script>
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
